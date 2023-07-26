@@ -1,0 +1,89 @@
+.loan-calculator {
+    margin: auto;
+    background-color: white;
+    padding-left: 40px;
+    box-sizing: border-box;
+    color: #896f6f;
+    display: flex;
+}
+
+.input-container {
+    margin-top: 20px;
+}
+
+.field-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.field-label {
+    text-align: right;
+    margin-right: 10px;
+    flex: 0 0 40%;
+}
+
+.field-input {
+    flex: 0 0 15%;
+}
+
+.field-unit {
+    flex: 0 0 40%;
+    margin-left: 10px;
+    // white-space: nowrap;
+}
+
+.down-payment-fields input {
+    width: 100%;
+}
+
+.down-payment-first {
+    margin-right: 15px;
+}
+
+.loan-amount-input {
+    background-color: #F1FAF6;
+    border: none !important;
+    outline: none;
+}
+
+.loan-term-select {
+    background-color: #F1FAF6;
+    border: none;
+    outline: none;
+    height: 46px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    font-family: RobotoRegular, Helvetica, Arial, sans-serif;
+    font-size: 15px;
+    background-image: url('../../assets/arrows-swed.svg');
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: 15px;
+    padding: 13px 10px 13px 10px;
+    border: 1px solid var(--ui-color-input-border);
+    border-radius: 3px;
+}
+
+
+.loan-term-select::-ms-expand {
+    color: black;
+    background: #F1FAF6;
+}
+
+
+.loan-term-select:after {
+    content: "";
+    background: url('../../public//arrows-swed.svg');
+    width: 15px;
+    height: 15px;
+    display: inline-block;
+    position: absolute;
+    right: 10px;
+    top: calc(50% - 7px);
+}
+
+.divider {
+    color: #EBE7E2;
+}

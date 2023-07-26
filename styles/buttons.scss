@@ -1,0 +1,36 @@
+:root {
+    --ui-color-turquoise: #31a3ae;
+    --ui-color-teal: #257886;
+    --ui-color-orange: #ff5f00;
+    --ui-color-orange-text: #fb4f00;
+}
+
+.button {
+    color: #fff;
+    font-weight: 550;
+    margin: 5px 10px 5px 10px;
+    padding: 15px 15px;
+    border-radius: 3px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    // white-space: nowrap;
+
+    &--apply {
+        background-color: var(--ui-color-orange);
+        border: none;
+
+        &:hover {
+            background-color: var(--ui-color-orange-text);
+        }
+    }
+
+    &--fill {
+        background-color: var(--ui-color-turquoise);
+        border: none;
+
+        &:hover {
+            background-color: var(--ui-color-teal);
+        }
+    }
+}

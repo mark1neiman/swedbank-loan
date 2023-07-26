@@ -1,0 +1,39 @@
+@import "./buttons.scss";
+
+:root {
+    --ui-color-background: #FDF6EE;
+    --ui-color-section-background: #FFF;
+    --ui-color-input-border: #bcd8db;
+}
+
+body {
+    background-color: var(--ui-color-background);
+    font-family: 'Roboto', Helvetica, Arial, sans-serif;
+}
+
+.section {
+    background-color: var(--ui-color-section-background);
+    width: 1220px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+input[type="text"],
+input[type="number"] {
+    line-height: 18px;
+    border-radius: 3px;
+    font-size: 15px;
+    padding: 13px 10px 13px 10px;
+    border: 1px solid var(--ui-color-input-border);
+}
+
+.LogoSection {
+    margin-left: auto;
+    margin-right: auto;
+    width: 1220px;
+}
+
+.swedbank-logo {
+    width: 200px;
+    margin-bottom: -80px;
+}

@@ -1,0 +1,80 @@
+.monthly-payment {
+    font-family: RobotoRegular, Helvetica, Arial, sans-serif;
+    font-size: 15px;
+    color: rgb(137, 111, 111);
+
+    &.positive {
+        color: rgb(81, 43, 43);
+    }
+
+    &.zero {
+        color: rgb(251, 79, 0);
+        font-family: HeadlineBlack, Helvetica, Arial, sans-serif;
+        font-size: 30px;
+        line-height: 30px;
+    }
+}
+
+.button-container {
+    display: flex;
+    align-items: center;
+}
+
+.separator {
+    height: 1px;
+    width: 100%;
+    background-color: #EBE7E2;
+}
+
+.loan-header {
+    font-family: HeadlineBlack, Helvetica, Arial, sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    color: rgb(81, 43, 43);
+}
+
+.payment-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: baseline;
+}
+
+.monthly-payment {
+    font-family: RobotoRegular, Helvetica, Arial, sans-serif;
+    font-size: 15px;
+    font-stretch: 100%;
+    font-weight: 400;
+    color: rgb(137, 111, 111);
+    margin-right: auto;
+}
+
+.payment-zero {
+    color: rgb(251, 79, 0);
+    font-family: HeadlineBlack, Helvetica, Arial, sans-serif;
+    font-feature-settings: normal;
+    font-size: 30px;
+    font-stretch: 100%;
+    font-weight: 700;
+    line-height: 30px;
+}
+
+.payment-unit {
+    font-family: RobotoRegular, Helvetica, Arial, sans-serif;
+    font-size: 15px;
+    font-stretch: 100%;
+    font-weight: 400;
+    color: rgb(137, 111, 111);
+    margin-left: 5px;
+}
+
+.divider {
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 20px 0;
+}
+
+
+.button-container {
+    display: flex;
+    justify-content: space-between;
+}
