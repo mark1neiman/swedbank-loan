@@ -1,20 +1,46 @@
 import React, { useState, useMemo, useEffect } from "react";
 import './LoanCounter.scss';
+import { Tooltip } from 'react-tooltip'
 
 interface LoanCalculatorProps {
     setMonthlyPayment: React.Dispatch<React.SetStateAction<string>>;
 }
 
 const LoanCalculator: React.FC<LoanCalculatorProps> = ({ setMonthlyPayment }) => {
-    const [propertyPrice, setPropertyPrice] = useState<number>(0);
-    const [downPayment, setDownPayment] = useState<number>(0);
+    const [propertyPrice, setPropertyPrice] = useState<number>(Number(sessionStorage.getItem('propertyPrice')) || 0);
+    const [downPayment, setDownPayment] = useState<number>(Number(sessionStorage.getItem('downPayment')) || 0);
     const [downPaymentPercent, setDownPaymentPercent] = useState<number>(15);
-    const [loanTerm, setLoanTerm] = useState<number>(25);
-    const [interestRate, setInterestRate] = useState<number>(1.99);
+    const [loanTerm, setLoanTerm] = useState<number>(Number(sessionStorage.getItem('loanTerm')) || 25);
+    const [interestRate, setInterestRate] = useState<number>(Number(sessionStorage.getItem('interestRate')) || 1.99);
+
+    const PLACES = ['bottom-start']
+    const [place, setPlace] = useState(0)
 
     const loanAmount = useMemo(() => {
         return propertyPrice - downPayment;
     }, [propertyPrice, downPayment]);
+
+    useEffect(() => {
+        sessionStorage.setItem('propertyPrice', propertyPrice.toString());
+    }, [propertyPrice]);
+
+    useEffect(() => {
+        sessionStorage.setItem('downPayment', downPayment.toString());
+    }, [downPayment]);
+
+    useEffect(() => {
+        sessionStorage.setItem('loanTerm', loanTerm.toString());
+    }, [loanTerm]);
+
+    useEffect(() => {
+        sessionStorage.setItem('interestRate', interestRate.toString());
+    }, [interestRate]);
+
+    useEffect(() => {
+        sessionStorage.setItem('loanAmount', loanAmount.toString());
+    }, [loanAmount]);
+
+
 
     useEffect(() => {
         const timer = setTimeout(() => {
@@ -28,7 +54,7 @@ const LoanCalculator: React.FC<LoanCalculatorProps> = ({ setMonthlyPayment }) =>
         };
     }, [propertyPrice]);
 
-    useMemo(() => {
+    useEffect(() => {
         const rate = (interestRate + 3.95) / (12 * 100);
         const termInMonths = loanTerm * 12;
         const monthlyPayment = loanAmount * rate * (Math.pow(1 + rate, termInMonths)) / (Math.pow(1 + rate, termInMonths) - 1);
@@ -81,15 +107,25 @@ const LoanCalculator: React.FC<LoanCalculatorProps> = ({ setMonthlyPayment }) =>
                         })}
                         <option value={101}>101 years</option>
                     </select>
-                    <label className="field-unit">Now available 101 years!</label>
-                </div>
+                    <button
+                        className="info-button"
+                        data-tooltip-id="my-tooltip">?
+                    </button>
+
+                    <Tooltip
+                        id="my-tooltip"
+                        content={`Down payment starting form 15%`}
+                        place={PLACES[place]}
+                        style={{ backgroundColor: "rgb(235, 231, 226)", color: "#512b2b" }}
+                    />
+                </div >
                 <div className="field-row">
                     <label className="field-label">Interest Rate </label>
                     <input className="field-input" type="number" value={interestRate} onChange={(e) => setInterestRate(Number(e.target.value))} />
                     <label className="field-unit">% + 3.95% 6-month Euribor</label>
                 </div>
             </div>
-        </div>
+        </div >
     );
 };
 

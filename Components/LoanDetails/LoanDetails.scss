@@ -74,7 +74,12 @@
 }
 
 
-.button-container {
-    display: flex;
-    justify-content: space-between;
+.error-message {
+    border: 1px solid #e2898d;
+    padding-top: 9px;
+    padding-bottom: 9px;
+    background-color: #F9DED3;
+    width: 100%;
+    color: #000 !important;
+    text-align: left;
 }

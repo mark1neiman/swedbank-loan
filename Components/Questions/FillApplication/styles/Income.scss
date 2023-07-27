@@ -1,0 +1,70 @@
+.income-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    margin: auto;
+    margin-top: 50px;
+    padding: 20px;
+    box-sizing: border-box;
+    width: 30%;
+    color: #896f6f;
+}
+
+.income-label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    white-space: nowrap;
+    font-family: RobotoRegular, Helvetica, Arial, sans-serif;
+    font-size: 15px;
+    color: rgb(137, 111, 111);
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+
+.income-input {
+    width: 50%;
+    border: 1px solid #BCD8DB;
+    border-radius: 4px;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.income-input,
+.income-checkbox {
+    margin-left: 20px;
+}
+
+.error-message {
+    border: 1px solid #e2898d;
+    padding-top: 9px;
+    padding-bottom: 9px;
+    background-color: #F9DED3;
+    width: 90%;
+    color: #000 !important;
+    padding-left: 10px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.next-button {
+    color: #fff;
+    font-weight: 550;
+    margin: 5px 10px 5px 10px;
+    padding: 15px 15px;
+    border-radius: 3px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    background-color: var(--ui-color-orange);
+    border: none;
+
+    &:hover {
+        background-color: var(--ui-color-orange-text);
+    }
+}

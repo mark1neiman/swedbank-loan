@@ -4,6 +4,42 @@
     --ui-color-background: #FDF6EE;
     --ui-color-section-background: #FFF;
     --ui-color-input-border: #bcd8db;
+    --radio-color: rgb(255, 95, 0);
+
+    input[type="checkbox"] {
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        -ms-appearance: none;
+        -o-appearance: none;
+        height: 28px;
+        width: 28px;
+        position: relative;
+        cursor: pointer;
+
+        &::before {
+            content: "\2713";
+            font-size: 24px;
+            text-align: center;
+            line-height: 28px;
+            color: #FFF;
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 28px;
+            height: 28px;
+            border: 2px solid #bcd8db;
+            border-radius: 4px;
+            background-color: #fff;
+        }
+
+        &:checked::before {
+            background-color: rgb(255, 95, 0);
+            border: 2px solid rgb(255, 95, 0);
+        }
+    }
+
 }
 
 body {

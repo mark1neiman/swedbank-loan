@@ -1,0 +1,89 @@
+@import './LoanPurpose.scss';
+
+
+.family-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    margin: auto;
+    margin-top: 50px;
+    padding: 20px;
+    box-sizing: border-box;
+    width: 70%;
+    color: #896f6f;
+}
+
+.family-label {
+    font-family: RobotoRegular, Helvetica, Arial, sans-serif;
+    font-size: 15px;
+    color: rgb(137, 111, 111);
+    margin-right: auto;
+    margin-bottom: 20px;
+    text-align: left;
+    width: 100%;
+}
+
+.family-select {
+    width: 100%;
+
+    & .css-13cymwt-control,
+    .css-t3ipsp-control {
+        border: 1px solid #BCD8DB !important;
+        background-color: #ECF9F3 !important;
+        height: 46px;
+    }
+
+    & .css-1dimb5e-singleValue {
+        color: black !important;
+    }
+
+    & .css-1nmdiq5-menu {
+
+        background-color: #ECF9F3 !important;
+        border: 1px solid rgb(112, 112, 112) !important;
+        border-radius: 0;
+        color: #000;
+    }
+
+    & .css-1xc3v61-indicatorContainer {
+        background-image: url('../../assets/arrows-swed.svg');
+        background-repeat: no-repeat;
+        background-position: right center;
+        width: 18px;
+        height: 18px;
+    }
+}
+
+.family-input {
+    width: 95%;
+    border: 1px solid #BCD8DB;
+    border-radius: 4px;
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 20px;
+    height: 100px;
+}
+
+.error-message {
+    color: red;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.next-button {
+    color: #fff;
+    font-weight: 550;
+    margin: 5px 10px 5px 10px;
+    padding: 15px 15px;
+    border-radius: 3px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    background-color: var(--ui-color-turquoise);
+    border: none;
+
+    &:hover {
+        background-color: var(--ui-color-teal);
+    }
+}

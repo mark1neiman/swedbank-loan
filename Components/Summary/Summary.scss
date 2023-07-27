@@ -1,0 +1,90 @@
+.summary {
+    width: 70%;
+
+    & h1 {
+        font-size: 16px;
+        font-weight: bold;
+        color: #512b2b;
+    }
+
+    hr {
+        border: 0;
+        height: 1px;
+        background: #efefef;
+    }
+
+    .summary-line {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .data-label {
+            text-align: center;
+            color: #868383;
+        }
+
+        .data-value {
+            margin-right: 10%;
+            text-align: right;
+            flex-grow: 1;
+            color: #868383;
+        }
+
+
+        .summary-section {
+            & h2 {
+                font-family: HeadlineBlack, Helvetica, Arial, sans-serif;
+                font-weight: 700;
+                font-size: 20px;
+                color: #BB866F;
+            }
+
+
+
+            & p {
+                font-family: RobotoRegular, Helvetica, Arial, sans-serif;
+                font-size: 15px;
+                color: rgb(137, 111, 111);
+                display: grid;
+                grid-template-columns: auto auto;
+                justify-content: space-between;
+                align-items: center;
+
+                &::before {
+                    content: attr(data-label);
+                    margin-right: 10px;
+
+                }
+
+                & .divider {
+                    border: 0;
+                    border-top: 1px solid #ccc;
+                    margin: 20px 0;
+                }
+            }
+        }
+    }
+
+    .next-button {
+        color: #fff;
+        font-weight: 550;
+        margin: 5px 10px 5px 10px;
+        padding: 15px 15px;
+        border-radius: 3px;
+        font-size: 15px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        background-color: var(--ui-color-orange);
+        border: none;
+
+        &:hover {
+            background-color: var(--ui-color-orange-text);
+        }
+    }
+
+    .button-container {
+        display: flex;
+        justify-content: center;
+        margin: 20px;
+    }
+}
